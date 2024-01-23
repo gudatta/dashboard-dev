@@ -46,7 +46,7 @@ export class Security {
                 listItems: [
                     {
                         listName: Strings.Lists.Main,
-                        groupName: this.ManagerGroup.Title,
+                        groupName: this._managerGroupInfo.Title,
                         permission: SPTypes.RoleType.WebDesigner
                     },
                     {
