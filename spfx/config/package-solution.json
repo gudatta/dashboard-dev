@@ -3,7 +3,7 @@
   "solution": {
     "name": "dev-dashboard-client-side-solution",
     "id": "aa46d9f8-b440-4b92-87bc-43a351b400e6",
-    "version": "0.0.1.0",
+    "version": "0.0.2.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
@@ -28,7 +28,7 @@
     "features": [
       {
         "title": "Feature for sp-dashboard webpart",
-        "description": "The feature that activates elements of the dev-dashboard solution.",
+        "description": "The feature for the dev-dashboard app.",
         "id": "71fbdc4e-60e3-4981-9ccf-118d9238a9a2",
         "version": "1.0.0.0"
       }
