@@ -1,6 +1,7 @@
 import { Version } from '@microsoft/sp-core-library';
 import {
   IPropertyPaneConfiguration,
+  PropertyPaneDropdown,
   PropertyPaneTextField
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
@@ -23,7 +24,8 @@ declare const SPDashboard: {
 };
 
 export interface IDashboardWebPartProps {
-  description: string;
+  dashboardType: string;
+  webUrl: string;
 }
 
 export default class DashboardWebPart extends BaseClientSideWebPart<IDashboardWebPartProps> {
@@ -32,7 +34,9 @@ export default class DashboardWebPart extends BaseClientSideWebPart<IDashboardWe
     // Render the application
     SPDashboard.render({
       el: this.domElement,
-      context: this.context
+      context: this.context,
+      dashboardType: this.properties.dashboardType,
+      sourceUrl: this.properties.webUrl
     });
   }
 
@@ -40,6 +44,10 @@ export default class DashboardWebPart extends BaseClientSideWebPart<IDashboardWe
   protected onInit(): Promise<void> {
   }
   */
+
+  protected get disableReactivePropertyChanges(): boolean {
+    return true;
+  }
 
   protected onThemeChanged(currentTheme: IReadonlyTheme | undefined): void {
     if (!currentTheme) {
@@ -70,10 +78,18 @@ export default class DashboardWebPart extends BaseClientSideWebPart<IDashboardWe
           },
           groups: [
             {
-              groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
+                PropertyPaneTextField('webUrl', {
+                  label: strings.WebUrlFieldLabel
+                }),
+                PropertyPaneDropdown('dashboardType', {
+                  label: strings.DashboardTypeFieldLabel,
+                  selectedKey: "table",
+                  options: [
+                    { key: "accordion", text: "Accordion" },
+                    { key: "table", text: "Table" },
+                    { key: "tiles", text: "Tiles" }
+                  ]
                 })
               ]
             }

@@ -26,6 +26,9 @@ const GlobalVariable = {
         return Strings.Version;
     },
     render: (props: IAppProps) => {
+        // Clear the element
+        while (props.el.firstChild) { props.el.removeChild(props.el.firstChild); }
+
         // See if the page context exists
         if (props.context) {
             // Set the context
@@ -47,7 +50,7 @@ const GlobalVariable = {
                 // Load the current theme and apply it to the components
                 ThemeManager.load(true).then(() => {
                     // Create the application
-                    new App(props.el);
+                    new App(props.el, props.dashboardType);
 
                     // Hide the loading dialog
                     LoadingDialog.hide();

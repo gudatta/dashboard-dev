@@ -8,7 +8,8 @@
     "build": "webpack --mode development",
     "clean": "node ./clean.js",
     "prod": "webpack --mode production",
-    "spfx": "cd spfx && npm run package"
+    "spfx": "cd spfx && npm run package",
+    "test": "npm run build && cd spfx && gulp serve"
   },
   "keywords": [],
   "author": "",

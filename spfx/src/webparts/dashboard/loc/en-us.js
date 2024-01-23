@@ -1,8 +1,9 @@
 define([], function() {
   return {
-    "PropertyPaneDescription": "Description",
-    "BasicGroupName": "Group Name",
-    "DescriptionFieldLabel": "Description Field",
+    "PropertyPaneDescription": "Properties for the Dashboard Solution",
+    "BasicGroupName": "Dashboard Properties",
+    "DashboardTypeFieldLabel": "Displays the data in a table, accordion or tile",
+    "WebUrlFieldLabel": "Web Url (If blank, will default to the current site)",
     "AppLocalEnvironmentSharePoint": "The app is running on your local environment as SharePoint web part",
     "AppLocalEnvironmentTeams": "The app is running on your local environment as Microsoft Teams app",
     "AppLocalEnvironmentOffice": "The app is running on your local environment in office.com",
