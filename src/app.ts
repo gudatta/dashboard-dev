@@ -36,10 +36,9 @@ export class App {
                 items: [{
                     header: "By Status",
                     items: DataSource.StatusFilters,
-                    multi: true,
-                    onFilter: (values: string[]) => {
+                    onFilter: (value: string) => {
                         // Filter the table
-                        this._dashboard.filterMulti(2, values);
+                        this._dashboard.filter(2, value);
                     }
                 }]
             },
@@ -69,6 +68,26 @@ export class App {
                     }
                 ]
             },
+            /*
+            accordion: {
+                items: DataSource.ListItems,
+                titleField: "Title",
+                bodyField: "ItemType",
+                filterField: "Status"
+            }
+            */
+           /*
+           tiles: {
+            items: DataSource.ListItems,
+            colSize: 4,
+            titleField: "Title",
+            subTitleField: "Status",
+            bodyField: "ItemType",
+            filterField: "Status",
+            showFooter: false,
+            showHeader: false
+           }
+           */
             table: {
                 rows: DataSource.ListItems,
                 dtProps: {

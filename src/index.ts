@@ -9,17 +9,24 @@ import Strings, { setContext } from "./strings";
 // Styling
 import "./styles.scss";
 
+// App Properties
+interface IAppProps {
+    el: HTMLElement;
+    context?: any;
+    sourceUrl?: string
+}
+
 // Create the global variable for this solution
 const GlobalVariable = {
     Configuration,
-    render: (el, context?, sourceUrl?: string) => {
+    render: (props: IAppProps) => {
         // See if the page context exists
-        if (context) {
+        if (props.context) {
             // Set the context
-            setContext(context, sourceUrl);
+            setContext(props.context, props.sourceUrl);
 
             // Update the configuration
-            Configuration.setWebUrl(sourceUrl || ContextInfo.webServerRelativeUrl);
+            Configuration.setWebUrl(props.sourceUrl || ContextInfo.webServerRelativeUrl);
         }
 
         // Show a loading dialog
@@ -34,7 +41,7 @@ const GlobalVariable = {
                 // Load the current theme and apply it to the components
                 ThemeManager.load(true).then(() => {
                     // Create the application
-                    new App(el);
+                    new App(props.el);
 
                     // Hide the loading dialog
                     LoadingDialog.hide();
@@ -103,5 +110,5 @@ window[Strings.GlobalVariable] = GlobalVariable;
 let elApp = document.querySelector("#" + Strings.AppElementId) as HTMLElement;
 if (elApp) {
     // Render the application
-    GlobalVariable.render(elApp);
+    GlobalVariable.render({ el: elApp });
 }

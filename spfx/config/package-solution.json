@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "dev-dashboard-client-side-solution",
+    "id": "aa46d9f8-b440-4b92-87bc-43a351b400e6",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.17.4"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "DevDashboard description"
+      },
+      "longDescription": {
+        "default": "DevDashboard description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "dev-dashboard Feature",
+        "description": "The feature that activates elements of the dev-dashboard solution.",
+        "id": "71fbdc4e-60e3-4981-9ccf-118d9238a9a2",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/dev-dashboard.sppkg"
+  }
+}

@@ -7,8 +7,8 @@ specifiers:
   css-loader: ^6.9.1
   datatables.net: ^1.13.8
   datatables.net-bs5: ^1.13.8
-  dattatable: ^2.9.62
-  gd-sprest-bs: ^10.11.2
+  dattatable: ^2.9.64
+  gd-sprest-bs: ^10.11.3
   html-loader: ^5.0.0
   jquery: ^3.7.1
   moment: ^2.30.1
@@ -22,8 +22,8 @@ specifiers:
 dependencies:
   datatables.net: 1.13.8
   datatables.net-bs5: 1.13.8
-  dattatable: 2.9.62_rhvvrawrv3jqq4a5njfvaba5fq
-  gd-sprest-bs: 10.11.2
+  dattatable: 2.9.64_dvsx2hux3kipbk3rip5r756344
+  gd-sprest-bs: 10.11.3
   jquery: 3.7.1
   moment: 2.30.1
 
@@ -1798,8 +1798,8 @@ packages:
       jquery: 3.7.1
     dev: false
 
-  /dattatable/2.9.62_rhvvrawrv3jqq4a5njfvaba5fq:
-    resolution: {integrity: sha512-yMskLUU68CZk8RC9RMguEK21knFmzOu4CRKI1uDbqnu7LWlF+GURE6oiso7CHbeypDy5fc8E20/8YVMOuHg7pw==}
+  /dattatable/2.9.64_dvsx2hux3kipbk3rip5r756344:
+    resolution: {integrity: sha512-HH75tp0SNe91RATkV+ShyRegAVku+6bhZEcezrkbQWVVHMdgGbaAuxrUYbGEpSbKPENCJy4qXD6+nios2qctvA==}
     peerDependencies:
       datatables.net: '*'
       datatables.net-bs5: '*'
@@ -1809,7 +1809,7 @@ packages:
     dependencies:
       datatables.net: 1.13.8
       datatables.net-bs5: 1.13.8
-      gd-sprest-bs: 10.11.2
+      gd-sprest-bs: 10.11.3
       jquery: 3.7.1
       moment: 2.30.1
     dev: false
@@ -2015,8 +2015,8 @@ packages:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
     dev: false
 
-  /gd-bs/6.5.7:
-    resolution: {integrity: sha512-d8kBJh25cL/TaDa/6ZD4hrbH5Npsyinu9LhGork9PBv9UiodOLwuPS6I/VXSVeYq1tmXKpL3oGMN1wkUjejX4A==}
+  /gd-bs/6.5.8:
+    resolution: {integrity: sha512-x4MJlPurxIbL5DupC5V3m+jlx+rl136rkcfFiqWnuQ5B9Be69KUgWc34g2XE6fv11ixcmEZrry4njWTQPyrfpw==}
     dependencies:
       '@popperjs/core': 2.11.8
       bootstrap: 5.3.2_@popperjs+core@2.11.8
@@ -2025,11 +2025,11 @@ packages:
       tippy.js: 6.3.7
     dev: false
 
-  /gd-sprest-bs/10.11.2:
-    resolution: {integrity: sha512-j2kJyNRDWVXGJWyGqX4K29fT8FkGGkczDYsPXR64jH992It25XBmcjIh+pm/G04Ra78OaYwTXRuDigUNMxIZwA==}
+  /gd-sprest-bs/10.11.3:
+    resolution: {integrity: sha512-hTqe0TGa84Ii/YXe+g1p+BHR8h1LT08AmoXZaxsiYxWV8tyoZjKqvRNjhChanZXM3WJWG1pbyrb2uQ24uTXgdQ==}
     dependencies:
       flatpickr: 4.6.13
-      gd-bs: 6.5.7
+      gd-bs: 6.5.8
       gd-sprest: 7.8.0
       gd-sprest-def: 1.3.3
       quill: 1.3.7
