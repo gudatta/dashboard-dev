@@ -13,12 +13,18 @@ import "./styles.scss";
 interface IAppProps {
     el: HTMLElement;
     context?: any;
+    dashboardType?: string;
+    listName?: string;
     sourceUrl?: string
 }
 
 // Create the global variable for this solution
 const GlobalVariable = {
     Configuration,
+    getVersion: () => {
+        // Return the version #
+        return Strings.Version;
+    },
     render: (props: IAppProps) => {
         // See if the page context exists
         if (props.context) {
@@ -100,6 +106,10 @@ const GlobalVariable = {
                 });
             }
         );
+    },
+    updateTheme: (themeInfo) => {
+        // Update the theme
+        ThemeManager.setCurrentTheme(themeInfo, true);
     }
 };
 
